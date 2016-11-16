@@ -5,7 +5,7 @@
 <% @machines.each do |machine| %>
   <h2> <%= machine.name %></h2>
   <h2> <%= machine.brand %></h2>
-<%= link_to "Voir", machine_path(machine) %>
-<%= link_to "Supprimer", machine_path(machine), method: :delete %>
+  <%= link_to "Voir", machine_path(machine) %>
+  <%= link_to "Supprimer", machine_path(machine), method: :delete, data: {confirm: "Etes vous sur de vouloir supprimer l'élément ?" } %>
 
 <% end %>
